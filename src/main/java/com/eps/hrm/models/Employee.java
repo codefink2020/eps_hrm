@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.List;
 
 @Data
 @Entity
@@ -16,5 +17,9 @@ public class Employee extends Person {
     private LocalDate terminationDate;
     @OneToOne
     private Contract contract;
-    private Vacation vacations;
+    @OneToMany
+    private List<Vacation> vacations;
+
+    @OneToOne
+    List<Certification> certificates;
 }

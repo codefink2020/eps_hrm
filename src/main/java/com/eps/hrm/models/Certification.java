@@ -9,7 +9,7 @@ import javax.persistence.Id;
 
 @Data
 @Entity
-public class Manager extends Employee{
+public class Certification {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
